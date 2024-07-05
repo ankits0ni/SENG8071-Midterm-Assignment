@@ -90,7 +90,7 @@ WHERE author_id IN (
 );
 ```
 
-###Loyal Customers
+### Loyal Customers
 ```sql
 SELECT customer_id, name, email, total_spent 
 FROM Customers 
@@ -98,7 +98,7 @@ WHERE total_spent > $1
   AND NOW() - INTERVAL '1 year';
 ```
 
-###Well Reviewed Books
+### Well Reviewed Books
 ```sql
 SELECT book_id, title 
 FROM Books 
@@ -113,7 +113,7 @@ WHERE book_id IN (
 );
 ```
 
-###Most Popular Genre by Sales
+### Most Popular Genre by Sales
 ```sql
 SELECT genre_id, name 
 FROM Genres 
@@ -126,14 +126,14 @@ WHERE genre_id = (
 );
 ```
 
-###10 Most Recent Posted Reviews by Customers
+### 10 Most Recent Posted Reviews by Customers
 ```sql
 SELECT review_id, book_id, customer_id, rating, review_text, review_date 
 FROM Reviews 
 ORDER BY review_date DESC 
 LIMIT 10;
 ```
-###TypeScript Interface and Implementation
+### TypeScript Interface and Implementation
 ```sql
 import { Pool, QueryResult } from 'pg';
 
